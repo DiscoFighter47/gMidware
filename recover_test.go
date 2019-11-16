@@ -21,9 +21,6 @@ func testHandler() http.HandlerFunc {
 			panic(fmt.Errorf("error"))
 		case "/panic":
 			panic("panic")
-		case "/runtime":
-			a, b := 1, 0
-			_ = a / b
 		}
 	}
 	return http.HandlerFunc(fn)
